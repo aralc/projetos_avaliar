@@ -17,7 +17,7 @@
 			    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
 			    <!-- Custom Fonts -->
 			    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-			        
+			        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 			           <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	</head>
 	<body>
@@ -125,7 +125,7 @@
                                     <a href="#"> CRUD <span class="fa arrow"></span></a>
                                     <ul class="nav nav-third-level">
                                         <li>
-                                        <a href="#"><i class="fa fa-edit fa-fw"></i> Cadastro de Cliente <span class="fa arrow"></span></a>
+                                        <a href="/cliente"><i class="fa fa-edit fa-fw"></i> Cadastro de Cliente <span class="fa arrow"></span></a>
                                         </li>
                                     </ul>
                             

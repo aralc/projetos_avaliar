@@ -1,15 +1,13 @@
 <?php
- 
-
-
-if (f_rotas('/start'))
+if (f_rotas('/cliente'))
     {
-    echo f_render('start/perfil','default');
+    echo f_render('cliente/cliente','default');
     } 
-    elseif (f_rotas('/start/perfil'))
+    elseif (f_rotas('/cliente/a'))
         {
         echo f_render('start/perfil','default');
         }
+        /*
         elseif (f_rotas('/start/perfil/delete/?(.*)'))
         {
             $id = explode('/', $_SERVER['PATH_INFO']);

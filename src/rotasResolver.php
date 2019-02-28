@@ -9,6 +9,6 @@ function f_rotas($rota)
         
         if(preg_match($rota,$path_route,$params))
         {
-            return 'oi';
+            return $params;
         }
     }
