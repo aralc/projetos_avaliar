@@ -45,17 +45,64 @@ class Cliente{
         $prepare = $sql->prepare('select * from tbCliente');
         $prepare->execute();
         
-        
-        
-        while($row = $prepare->fetch(PDO::FETCH_OBJ))
+         
+        if(count($prepare->rowCount()) >= 1)
         {
-            
-            $rows[] = $row;
+            while($row = $prepare->fetch(PDO::FETCH_OBJ))
+                {
+                $rows[] = $row;
+                }
+                return $rows;
+        } else 
+        {
+           return null;
         }
         
         //echo $sql->errorInfo();
-            return $rows;
+        
+        
        
+        }
+        
+        public function getClienteById($id)
+        {
+            $db = new pdoDB();
+            $sql = $db->connect();
+            $prepara = $sql->prepare('select * from tbCliente where id = :id ');
+            $prepara->bindParam(':id', $id, PDO::PARAM_INT);
+            $prepara->execute();
+            
+            if (count($prepara->rowCount()) == 1)
+                {
+                    
+                $linha = $prepara->fetch(PDO::FETCH_OBJ);
+                return $linha;
+                }
+                else 
+                {
+                    return $null;
+                }
+        }
+        
+        public function deleteById($id)
+        {
+            $db = new pdoDB();
+            $sql = $db->connect();
+            $prepare = $sql->prepare('delete from tbCliente where id = :id');
+            $prepare->bindParam(':id', $id, PDO::PARAM_INT);
+            $sql->beginTransaction();
+            $prepare->execute();
+            
+            if (count($prepare->rowCount() == 1))
+            {
+                $sql->commit();
+                return header('location: /cliente');
+            } else {
+                    $sql->rollBack();
+                    return header('location: /cliente/error');
+                    }
+            
+            
         }
    
     

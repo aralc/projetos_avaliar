@@ -16,6 +16,24 @@ if (f_rotas('/cliente'))
         {
         $c = new Cliente();
         $c->createCliente($nome, $bairro, $uf, $cep);
-        
-        }
+        } 
+        elseif (f_rotas('/cliente/delete/?([0-9])*'))
+            {
+                $id = explode('/',$_SERVER['PATH_INFO']);
+                $id_final = end($id);
+                $c = new Cliente();
+                $c->deleteById($id_final);
+            } 
+            elseif (f_rotas('/cliente/editar/?(.*)'))
+                    {
+                        echo f_render('cliente/cliente','default');
+                    $id = explode('/',$_SERVER['PATH_INFO']);
+                    $id_final = end($id);
+                    $c = new Cliente();
+                    $cliente = $c->getClienteById($id_final);
+                    //var_dump($cliente);
+                    
+                    }
+                
+            
         
