@@ -30,5 +30,10 @@ if (f_rotas('/start'))
                 //Gera o PDF
                 $pdf -> ezStream();
                 
-            }
+        } else 
+        {
+        http_response_code(404);
+        echo "Pagina não encontrada";
+        
+        }
 

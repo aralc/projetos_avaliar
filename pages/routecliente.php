@@ -17,7 +17,7 @@ if (f_rotas('/cliente'))
         $c = new Cliente();
         $c->createCliente($nome, $bairro, $uf, $cep);
         } 
-        elseif (f_rotas('/cliente/delete/?([0-9])*'))
+        elseif (f_rotas('/cliente/delete/(\d)+/deletar')) //(\d) indicai que receber numeros 1 ou mais 
             {
                 $id = explode('/',$_SERVER['PATH_INFO']);
                 $id_final = end($id);
@@ -33,6 +33,10 @@ if (f_rotas('/cliente'))
                     $cliente = $c->getClienteById($id_final);
                     //var_dump($cliente);
                     
+                    } else 
+                    {
+                        http_response_code(404);
+                        echo "pagina não encontrada";
                     }
                 
             

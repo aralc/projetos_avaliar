@@ -1,6 +1,8 @@
 
 <?php
 
+http_response_code(500);
+
 function setInternalServerError($errno,$errstr = '',$errfile = '',$errline = '')
 {
     
