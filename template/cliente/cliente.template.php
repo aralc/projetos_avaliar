@@ -1,7 +1,7 @@
 <script type="text/javascript">
 $(document).ready(function()
 {	
-	alert('working');
+//	alert('working');
 	function limpa_formulário_cep() {
         // Limpa valores do formulário de cep.
         $("#ruaCli").val("");
@@ -111,5 +111,60 @@ $(document).ready(function()
 </div>                                        
 </div>
 </div>
+
+
+<div class="panel panel-default">
+                        <div class="panel-heading">
+                            CLiente 
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Nome</th>
+                                            <th>Cep</th>
+                                            <th>Uf</th>
+                                            <th>Ação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    
+                                    <?php 
+                                $cli = new Cliente();
+                                $clientes = $cli->getAllCliente();
+            //                    var_dump($skl);
+                            
+                                foreach ($clientes as $c)
+                                {
+                                ?>
+                                        <tr>
+                                            <td><?php echo $c->Id ?? null ;?></td>
+                                            <td><?php echo $c->Nome ?? null;?></td>
+                                            <td><?php echo $c->Cep ?? null;?></td>
+                                            <td><?php echo $c->Uf ?? null; ?></td>
+                                            <td><a href="<?php echo 'cliente/delete/'.$c->Id;?>"><button class="btn btn-warning"> Apagar</button></a></td>
+                                        </tr>
+                                        
+								<?php } ?>                                        
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
 
 
