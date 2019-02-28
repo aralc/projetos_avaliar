@@ -55,6 +55,29 @@ class Usuario
             }
         
     }
+    
+    public function deleteUsuarioSkills($id)
+    {
+        $db = new pdoDB();
+        $prepare = $db->connect();
+        $sql = $prepare->prepare('delete from tbSkills where Id = :id_skill');
+        $sql->bindParam(':id_skill', $id,PDO::PARAM_INT);
+        $prepare->beginTransaction();
+        $sql->execute();
+        
+        if (count($sql->rowCount()) == 1)
+        {
+            echo "ok";
+            $prepare->commit();
+            return header('location: /start/perfil');
+        } else 
+        {
+          echo "error";
+          $prepare->rollBack();
+        }
+        
+    }
+    
         
     
 }

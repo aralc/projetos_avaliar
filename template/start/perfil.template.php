@@ -25,7 +25,7 @@ $skl = $usuario->getUsuarioSkills($usr[0]['Id']);
            <div class="panel panel-default">
            
                  <div class="panel-heading">
-                 Perfil <input class="btn btn-success" type="submit" value="Exportar para PDF">
+                 Perfil <a href="/start/perfil/pdf/"> <button class="btn btn-success" > Exportar para PDF</button></a>
                         </div>
                         
                         
@@ -83,7 +83,7 @@ $skl = $usuario->getUsuarioSkills($usr[0]['Id']);
                                             <td><?php echo $s['Id'] ?? null ;?></td>
                                             <td><?php echo $s['Descricao'] ?? null;?></td>
                                             <td><?php echo $s['Pontuacao'] ?? null; ?></td>
-                                            <td><button class="btn btn-warning"> Apagar</button></td>
+                                            <td><a href="<?php echo 'perfil/delete/'.$s['Id'];?>"><button class="btn btn-warning"> Apagar</button></a></td>
                                         </tr>
                                         
 								<?php } ?>                                        
