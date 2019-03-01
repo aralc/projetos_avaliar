@@ -4,15 +4,27 @@
  * f_render ( funcao para renderização das paginas  
  */
 
+require __DIR__.'/pages/db.php';
+require __DIR__.'/class/classPaginas.php';
+
 if (f_rotas('/admin'))
     {
-    f_render('admin/pages/index','admin');
-    } 
+    $paginas = $pages_all();
+    f_render('admin/pages/index','admin', ['paginas' => $paginas]);
+    }
+    elseif('/admmin/?([a-z)+)')
+        {
+        require __DIR__.'/pages/route.php';
+        }
+            
+    
+    
+/*    
     elseif (f_rotas('/admin/create'))
         {
         f_render('admin/pages/create', 'admin');
         } 
-        elseif (f_rotas('/admin/(\d)+/edit')) /* (\d)+ aceita somente numeros exp reg */
+        elseif (f_rotas('/admin/(\d)+/edit')) // (\d)+ aceita somente numeros exp reg 
             {
              f_render('admin/pages/edit','admin');
             }
@@ -29,7 +41,7 @@ if (f_rotas('/admin'))
                         echo "<h1> Ops Paginas não encontrada</h1>";                            
                         http_response_code(404);
                         }
-                                        
+*/                                        
 
 
     

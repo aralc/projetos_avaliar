@@ -1,4 +1,6 @@
 <?php
+session_start();
+session_save_path(__DIR__.'/session');
 
 require __DIR__.'/config.php'; 
 require __DIR__.'/src/error.php';

@@ -1,4 +1,4 @@
-<h3 class="pm-3">
+<h3 class="mb-5">
 Criar paginas    
 </h3>
 
@@ -22,7 +22,10 @@ Criar paginas
 		<input type="date" class="form-control" name="titulo" id="adminData" placeholder="Data" required> 
 	</div>
 	<div class="form-group">
-		// editor de texto, incluir aqui  
+			<input type="hidden" name="Texto" id="adminTexto" value="">
+			<trix-editor input="adminTexto"> 
+			
+			</trix-editor>  
 	</div>
 	<button type="submit" class="btn btn-primary">SALVAR</button>
 	<hr>
