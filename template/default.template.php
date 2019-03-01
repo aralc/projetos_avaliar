@@ -117,6 +117,10 @@
                         <li>
                             <a href="/start/perfil"><i class="fa fa-dashboard fa-fw"></i> Perfil </a>
                         </li>
+                        <li>
+                            <a href="/admin"><i class="fa fa-dashboard fa-fw"></i> Administração </a>
+                        </li>
+                        
                         
                         <li>
                             <a href="#"><i class="fa fa-sitemap fa-fw"></i> Skills Especificas <span class="fa arrow"></span></a>

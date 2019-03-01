@@ -15,9 +15,9 @@
   
   <div id="header">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a href="" class="navbar-brand"> Administração </a>
+  <a href="" class="navbar-brand"> Administração do portifolio  </a>
   <span class="navbar-text">
-  		Adm
+  		Adm - login
   </span>
   </nav>
   	

@@ -7,13 +7,6 @@
 if (f_rotas('/admin'))
     {
     f_render('admin/pages/index','admin');
-<<<<<<< HEAD
-    } else 
-    {
-        echo "Página não encontrada";
-        http_response_code(404);
-    }
-=======
     } 
     elseif (f_rotas('/admin/create'))
         {
@@ -37,7 +30,7 @@ if (f_rotas('/admin'))
                         http_response_code(404);
                         }
                                         
->>>>>>> dev
+
 
     
     
