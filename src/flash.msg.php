@@ -18,8 +18,8 @@ function flash($message = null, $type = null)
                     } 
               foreach($flash as $key => $message)
                 {
-                  f_render('flash', 'ajax', $message);
-                  unset($_SESSION);
+                  f_render('flash/flash', 'ajax', $message);
+                  unset($_SESSION['flash'][$key]);
                 }
             }
     }

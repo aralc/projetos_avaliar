@@ -19,7 +19,9 @@
 			    
 			    <!-- Custom Fonts -->
 			    <link rel="stylesheet" href="/recursos/trix/trix.css" >
+			    <link rel="stylesheet" href="/recursos/pnotify/pnotify.custom.min.css" >
     			<link rel="stylesheet" href="/css/style.css" >
+    			 
 			    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 			        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 			           <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -341,6 +343,10 @@
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
     <script src="/recursos/trix/trix.js"> </script>
+    <script src="/recursos/pnotify/pnotify.custom.min.js"> </script>
+    <script>
+    <?php  flash(); // alertas de mensagens ?>
+    </script>
 
 </body>
 

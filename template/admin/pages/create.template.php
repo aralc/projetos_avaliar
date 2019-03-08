@@ -4,6 +4,7 @@ Criar paginas
 
 <form action="" method="post"> 
 	<div class="form-group">
+		<input type="hidden" name="id" value=<?php echo $data['pagina']['id'] ?? '';?>
 		<label for="adminTitulo"> Titulo <span> Este é um label </span></label>
 		<input type="text" class="form-control" name="titulo" id="adminTitulo" placeholder="Titulo..." required> 
 	</div>
@@ -13,13 +14,15 @@ Criar paginas
 		<div class="input-group-prepend">
 		<span class="input-group-text">/</span>
 		</div>
-			<input type="text" class="form-control" name="titulo" id="adminUrl" placeholder="Url amigavel.." required>
+			<input type="text" class="form-control" name="url" id="adminUrl" placeholder="Url amigavel.." >
 		</div>			 
 	</div>
 	
 	<div class="form-group">
-		<label for="adminData"> Data </label>
-		<input type="date" class="form-control" name="titulo" id="adminData" placeholder="Data" required> 
+		<select name="select" class="form-control">
+			<option value="1">Admin</option>
+			<option value="2">Start</option>
+		</select> 
 	</div>
 	<div class="form-group">
 			<input type="hidden" name="Texto" id="adminTexto" value="">

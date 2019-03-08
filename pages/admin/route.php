@@ -5,10 +5,13 @@
  */
 
 require __DIR__.'/pages/db.php';
+require __DIR__.'/pages/funcoes.php';
 require __DIR__.'/class/classPaginas.php';
+
 
 if (f_rotas('/admin'))
     {
+        
     $paginas = $pages_all();
     f_render('admin/pages/index','admin', ['paginas' => $paginas]);
     }

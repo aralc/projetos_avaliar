@@ -3,31 +3,31 @@
 	<div class="col-3">
 	<dl class="row">
 		<dt class="col-sm-4">Titulo</dt>
-		<dd class="col-sm-8"> <?php //echo $data['paginas']['titulo'];?></dd>
+		<dd class="col-sm-8"> <?php echo $data['titulo'];?></dd>
 		
-		<dt class="col-sm-4">URL</dt>
-		<dd class="col-sm-8"> / - <a href="/" targer="blank"> abrir </a></dd>
+		<dt class="col-sm-4"><?php echo $data['url'];?></dt>
+		<dd class="col-sm-8"> /<?php echo $data['url'];?> - <a href="<?php echo $data['url'];?>" targer="blank"> abrir </a></dd>
 		
 		<dt class="col-sm-4">Criado em </dt>
-		<dd class="col-sm-8"> 01/03/2019 </dd>
+		<dd class="col-sm-8"> <?php echo $data['dt_criado'];?> </dd>
 		
 		<dt class="col-sm-4">Atualizado em</dt>
-		<dd class="col-sm-8"> 01/03/2019 </dd>
+		<dd class="col-sm-8"> <?php echo $data['dt_update'];?> </dd>
 		
 		
 	</dl>
 	</div>
 	<div class="col bg-light">
-			<h3> Pagina inicial  </h3>
-			<div> Esta é a pagina inical </div>
+			<h3> <?php echo $data['titulo']; ?>  </h3>
+			<div> <?php echo $data['texto']; ?> </div>
 	</div>
 	
 	
 
 </div>
 <p>
-<a href="/admin/1/edit" class="btn btn-primary"> Editar </a>
-<a href="/admin/1/edit" class="btn btn-danger"> Remover </a>
+<a href="/admin/<?php echo $data['id'];?>/edit" class="btn btn-primary"> Editar </a>
+<a href="/admin/<?php echo $data['id'];?>/delete" class="btn btn-danger confirm" id="confirm"> Remover </a>
 
 <p>
 <a href="/admin" class="btn btn-secondary"> Voltar Inicio </a>

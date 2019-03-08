@@ -6,11 +6,13 @@ require __DIR__.'/config.php';
 require __DIR__.'/src/error.php';
 require __DIR__.'/src/rotasResolver.php';
 require __DIR__.'/src/render.php';
-//require __DIR__.'/src/session.php';
+require __DIR__.'/src/flash.msg.php';
+//
 require __DIR__.'/src/database.php';
 require __DIR__.'/class/Usuario.php';
 require __DIR__.'/class/Cliente.php';
 require __DIR__.'/vendor/src/Cezpdf.php';
+
 
 
 

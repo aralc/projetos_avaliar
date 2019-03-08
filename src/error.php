@@ -15,7 +15,7 @@ function setInternalServerError($errno,$errstr = '',$errfile = '',$errline = '')
     
     echo '<h1> Error </h1>';
     
-    switch ($errno)
+    switch ($errstr)
     {
         case E_USER_ERROR:
             echo '<strong>user error</stong>[ ' . $errno . ' ] ' . $errstr . ' [ file ] ' . $errfile . ' [ line ] ' . $errline . '<br>\n';
