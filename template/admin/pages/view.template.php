@@ -2,11 +2,12 @@
 <div class="row">
 	<div class="col-3">
 	<dl class="row">
+	<?php var_dump($data); ?>
 		<dt class="col-sm-4">Titulo</dt>
 		<dd class="col-sm-8"> <?php echo $data['titulo'];?></dd>
 		
 		<dt class="col-sm-4"><?php echo $data['url'];?></dt>
-		<dd class="col-sm-8"> /<?php echo $data['url'];?> - <a href="<?php echo $data['url'];?>" targer="blank"> abrir </a></dd>
+		<dd class="col-sm-8"> /<?php echo strtolower($data['nome']) .'/'. $data['url'];?> - <a href="../../<?php echo strtolower($data['nome']) .'/'. $data['url'];?>" targer="blank"> abrir </a></dd>
 		
 		<dt class="col-sm-4">Criado em </dt>
 		<dd class="col-sm-8"> <?php echo $data['dt_criado'];?> </dd>

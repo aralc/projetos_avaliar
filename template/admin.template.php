@@ -30,8 +30,8 @@
 	<div class="col"> 
 		<ul id="main-menu" class="nav flex-column nav-pills bg-secondary text-white p-2">
 		<li class="nav-item"> <span class="nav-link"> Menu </span></li>
-		<li class="nav-item"> <a href="" class="nav-link active"> Paginas </a></li>
-		<li class="nav-item"> <a href="" class="nav-link"> Usuários</a></li>
+		<li class="nav-item"> <a href="/admin" class="nav-link active"> Paginas </a></li>
+		<li class="nav-item"> <a href="/admin/users" class="nav-link"> Usuários</a></li>
 		</ul>
 	</div>
 	<div id="content" class="col-10"><?php require $conteudo; ?></div>

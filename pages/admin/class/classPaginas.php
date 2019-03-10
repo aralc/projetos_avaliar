@@ -42,7 +42,8 @@ class classPaginas
             $sql = $con->connect();
             $prepare = $sql->prepare('update tbPaginas set titulo = :titulo,
                                                             url = :url,
-                                                            texto = :texto
+                                                            texto = :texto,
+                                                            dt_update = now()
                                                             where id = :id');
             $prepare->bindParam(':titulo', $titulo);
             $prepare->bindParam(':texto',$conteudo);

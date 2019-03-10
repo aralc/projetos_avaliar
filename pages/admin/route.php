@@ -11,14 +11,22 @@ require __DIR__.'/class/classPaginas.php';
 
 if (f_rotas('/admin'))
     {
-        
     $paginas = $pages_all();
     f_render('admin/pages/index','admin', ['paginas' => $paginas]);
     }
-    elseif('/admmin/?([a-z)+)')
+    elseif(f_rotas('/admin/users/?.*'))
         {
-        require __DIR__.'/pages/route.php';
+        require __DIR__.'/users/route.php';
         }
+        elseif(f_rotas('/admin/api/?(.*)+'))
+            {
+            require __DIR__.'/api/route.php';
+            }
+            elseif(f_rotas('/admin/?(.*)+'))
+                {
+                require __DIR__.'/pages/route.php';
+                }
+        
             
     
     

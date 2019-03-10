@@ -13,6 +13,7 @@
 	
 	
 	<tbody>
+	
 <?php foreach($data['paginas'] as $v) : ?>	
 		<tr>
 			<td><?php echo $v['id'] ;?></td>

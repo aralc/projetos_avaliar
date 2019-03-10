@@ -34,7 +34,11 @@ $pages_one = function ($id)
     {
         $con = new pdoDB();
         $sql = $con->connect();
-        $prepare = $sql->prepare('select * from tbPaginas where id = :id');
+        $prepare = $sql->prepare('select p.id,p.titulo,p.url,p.texto,p.dt_criado,p.dt_update,c.nome
+                                                                     from tbPaginas p 
+                                                                     inner join tbCategoriaPagina c on 
+                                                                     p.idCategoria = c.id 
+                                                                    where p.id = :id');
         $prepare->bindParam('id', $id);
         $prepare->execute();
             if ($prepare->rowCount() == 1)
